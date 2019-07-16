@@ -30,10 +30,10 @@ function newGame() {
     $("#crystal2").attr("data-crystalvalue", crystal2);
     $("#crystal3").attr("data-crystalvalue", crystal3);
     $("#crystal4").attr("data-crystalvalue", crystal4);
-    $("#")
-    $("#")
-    $("#")
-    $("#")
-    $("#")
-    $("#")
+    $("#wins").text(wins);
+    $("#losses").text(losses);
+    $("#winOrLose").text("");
+  console.log(crystal1, crystal2, crystal3, crystal4);
+  //console log to see scores currently placed on crystals
 }
+
