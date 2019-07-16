@@ -13,7 +13,7 @@ $(document).ready(function() {
 //using Math.ceil() function in JavaScript is used to round the number passed as parameter to its nearest integer in Upward direction of rounding i.e towards the greater value.
 //to create the number randomly for the crystals and make sure they round up
 function newNumbers () {
-    magicNumber = Math.floor(Math.random() * 110 + 20;
+    magicNumber = Math.floor(Math.random() * 110 + 20);
     crystal1 = Math.ceil(Math.random() * 12);
     crystal2 = Math.ceil(Math.random() * 12);
     crystal3 = Math.ceil(Math.random() * 12);
@@ -37,3 +37,16 @@ function newGame() {
   //console log to see scores currently placed on crystals
 }
 
+//show player winning
+function youWin() {
+    $("#winOrLose").text("YOU WIN!");
+    win++;
+    $("#wins").text(wins);
+}
+
+//show player losing
+function youLose() {
+    $("#winOrLose").text("YOU LOSE!");
+    losses++;
+    $("#losses").text(losses);
+}
