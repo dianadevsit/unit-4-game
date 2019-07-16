@@ -50,3 +50,38 @@ function youLose() {
     losses++;
     $("#losses").text(losses);
 }
+});
+
+//new game
+newGame();
+$(".crystalimg").hover(function () {
+    $(this).css({opacity: 0.4});
+},
+function() {
+    $(this).css({opacity: .09});
+
+});
+
+//copied from a word doc that I had written on
+$(".crystalimg").on("click", function() {
+    if (totalScore >= magicNumber) {
+        return;
+    }
+
+    var crystalValue = $(this).attr("data-crystalvalue");
+    crystalValue = parseInt(crystalValue);
+    totalScore += crystalValue;
+    $("#totalScore").text(totalScore);
+
+//if else statement for winning/losing
+//copied from word doc
+if (totalScore === magicNumber) {
+    youWin();
+} else if (totalScore > magicNumber) {
+    youLose();
+}
+});
+$(".btn").on("click", function() {
+    newGame();
+});
+
