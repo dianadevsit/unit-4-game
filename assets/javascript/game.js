@@ -19,4 +19,21 @@ function newNumbers () {
     crystal3 = Math.ceil(Math.random() * 12);
     crystal4 = Math.ceil(Math.random() * 12);
 }
+//function for when the game starts
+//attr() method sets or returns attributes and values of the selected elements. 
+function newGame() {
+    newNumbers();
+    totalScore = 0;
+    $("#magicNumber").text(magicNumber);
+    $("#totalScore").text(totalScore);
+    $("#crystal1").attr("data-crystalvalue", crystal1);
+    $("#crystal2").attr("data-crystalvalue", crystal2);
+    $("#crystal3").attr("data-crystalvalue", crystal3);
+    $("#crystal4").attr("data-crystalvalue", crystal4);
+    $("#")
+    $("#")
+    $("#")
+    $("#")
+    $("#")
+    $("#")
 }
