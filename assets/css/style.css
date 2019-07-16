@@ -1,0 +1,31 @@
+/* copied sections from my word doc */
+/* background */
+body {
+	background-image: url("../images/background.jpg");
+}
+
+.jumbotron {
+	background-color: #ffffff;
+}
+#gameSection, #scoreSection {
+	background-color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* button images */
+.icons {
+	display: inline-block;
+  	max-width: 100px;
+  	max-height: 100px;
+  	width: auto;
+  	height: auto;
+  	margin:10px;
+}
+/*button portion */
+#buttonSection {
+
+	/*background-color: yellow;*/
+	padding: 0px;
+	padding-top: 50px;
+	padding-bottom: 25px;
+}
