@@ -52,11 +52,11 @@ $(document).ready(function() {
 	function startGame() {
 		$(".crystalimg").hover(function() {
 			$(this).css({
-				opacity: 0.4
+				opacity: 1
 			});
 		}, function() {
 			$(this).css({
-				opacity: .09
+				opacity: 1
 			});
 		});
 		//copied from a word doc that I had written on
