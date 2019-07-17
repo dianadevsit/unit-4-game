@@ -52,7 +52,7 @@ $(document).ready(function() {
 	function startGame() {
 		$(".crystalimg").hover(function() {
 			$(this).css({
-				opacity: 1
+				opacity: 1.5
 			});
 		}, function() {
 			$(this).css({
