@@ -47,38 +47,42 @@ $(document).ready(function() {
 		losses++;
 		$("#losses").text(losses);
 	}
+	//fix error how prints equal "NaN"
+	//new game
+	function startGame() {
+		$(".crystalimg").hover(function() {
+			$(this).css({
+				opacity: 0.4
+			});
+		}, function() {
+			$(this).css({
+				opacity: .09
+			});
+		});
+		//copied from a word doc that I had written on
+		// The parseInt function converts its first argument to a string, parses that string, then returns an integer or NaN.
+		// return: when a return statement is used in a function body, the execution of the function is stopped. 
+		$(".crystalimg").on("click", function() {
+			if (totalScore >= magicNum) {
+				return;
+			}
+			var crystalValue = $(this).attr("data-crystalvalue");
+			crystalValue = parseInt(crystalValue);
+			totalScore += crystalValue;
+			$("#totalScore").text(totalScore);
+			console.log(crystalValue);
+			//console log for the crystalvalue to see if game is running
+			//if else statement for winning/losing
+			//copied from word doc
+			if (totalScore === magicNum) {
+				youWin();
+			} else if (totalScore > magicNum) {
+				youLose();
+			}
+		});
+		$(".btn").on("click", function() {
+			newGame();
+		});
+	}
+	startGame();
 });
-//new game
-function newGame() {
-	$(".crystalimg").hover(function() {
-		$(this).css({
-			opacity: 0.4
-		});
-	}, function() {
-		$(this).css({
-			opacity: .09
-		});
-	});
-	//copied from a word doc that I had written on
-	$(".crystalimg").on("click", function() {
-		if (totalScore >= magicNum) {
-			return;
-		}
-		var crystalValue = $(this).attr("data-crystalvalue");
-		crystalValue = parseInt(crystalValue);
-		totalScore += crystalValue;
-        $("#totalScore").text(totalScore);
-        console.log(crystalValue);
-        //console log for the crystalvalue to see if game is running
-		//if else statement for winning/losing
-		//copied from word doc
-		if (totalScore === magicNum) {
-			youWin();
-		} else if (totalScore > magicNum) {
-			youLose();
-		}
-	});
-	$(".btn").on("click", function() {
-		newGame();
-    });
-}
