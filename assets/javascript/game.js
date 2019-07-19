@@ -1,7 +1,7 @@
 //adding variables for the crystals with wins and the total score
 $(document).ready(function() {
 	var magicNum;
-	var totalScore = 0;
+	var totalScore;
 	var wins = 0;
 	var losses = 0;
 	var crystal1;
@@ -39,7 +39,7 @@ $(document).ready(function() {
 	//show player winning
 	function youWin() {
 		$("#winOrLose").text("YOU WIN!");
-		win++;
+		wins++;
 		$("#wins").text(wins);
 	}
 	//show player losing
