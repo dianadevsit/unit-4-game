@@ -1,13 +1,14 @@
 //adding variables for the crystals with wins and the total score
 $(document).ready(function() {
 	var magicNum;
-	var totalScore;
-	var wins;
-	var losses;
+	var totalScore = 0;
+	var wins = 0;
+	var losses = 0;
 	var crystal1;
 	var crystal2;
 	var crystal3;
 	var crystal4;
+	newGame();
 	//creating functions -- using Math.floor(Math.random()
 	//using Math.ceil() function in JavaScript is used to round the number passed as parameter to its nearest integer in Upward direction of rounding i.e towards the greater value.
 	//to create the number randomly for the crystals and make sure they round up
@@ -70,7 +71,6 @@ $(document).ready(function() {
 			crystalValue = parseInt(crystalValue);
 			totalScore += crystalValue;
 			$("#totalScore").text(totalScore);
-			console.log(crystalValue);
 			//console log for the crystalvalue to see if game is running
 			//if else statement for winning/losing
 			//copied from word doc
