@@ -1,13 +1,13 @@
 //adding variables for the crystals with wins and the total score
 $(document).ready(function() {
-	var magicNum;
-	var totalScore;
-	var wins = 0;
-	var losses = 0;
-	var crystal1;
-	var crystal2;
-	var crystal3;
-	var crystal4;
+	let magicNum;
+	let totalScore;
+	let wins = 0;
+	let losses = 0;
+	let crystal1;
+	let crystal2;
+	let crystal3;
+	let crystal4;
 	newGame();
 	//creating functions -- using Math.floor(Math.random()
 	//using Math.ceil() function in JavaScript is used to round the number passed as parameter to its nearest integer in Upward direction of rounding i.e towards the greater value.
@@ -30,8 +30,8 @@ $(document).ready(function() {
 		$("#crystal2").attr("data-crystalvalue", crystal2);
 		$("#crystal3").attr("data-crystalvalue", crystal3);
 		$("#crystal4").attr("data-crystalvalue", crystal4);
-		$("#wins").text(wins);
-		$("#losses").text(losses);
+		$("#wins").attr("data-winsvalue", wins);
+		$("#losses").attr("data-lossesvalue", losses);
 		$("#winOrLose").text("");
 		console.log(crystal1, crystal2, crystal3, crystal4);
 		//console log to see scores currently placed on crystals

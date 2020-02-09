@@ -12,6 +12,9 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 }
+.textCrystal {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
 /* button images */
 .icons {
 	display: inline-block;
